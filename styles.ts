@@ -25,6 +25,7 @@ export const GlobalCss = createGlobalStyle`
   body {
     background-color: ${colors.night};
     color: ${colors.cityLights};
+    height: 2000px;
   }
 
   a {

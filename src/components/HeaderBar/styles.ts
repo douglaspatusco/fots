@@ -1,20 +1,32 @@
 import styled from 'styled-components'
 import { colors } from '../../../styles'
 
-export const HeaderBar = styled.header`
+export const Container = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8em;
+  z-index: 10;
+`
+
+export const HeaderBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  padding: 0 32px;
+  margin: 1em;
+`
 
-  img {
-    margin-top: 24px;
-    width: 150px;
-    transition: transform 0.5s ease;
-  }
+export const Logo = styled.img`
+  position: absolute;
+  top: 0;
+  right: 46%;
 
-  img:hover {
+  width: 150px;
+  margin-top: 24px;
+  transition: transform 0.5s ease;
+
+  &:hover {
     transform: scale(1.5);
   }
 `
@@ -22,7 +34,7 @@ export const HeaderBar = styled.header`
 export const SocialMedias = styled.div`
   display: flex;
   gap: 32px;
-  margin: auto 16px;
+  margin: 4px 16px;
   color: ${colors.cityLights};
 
   svg:hover {
@@ -34,6 +46,7 @@ export const SocialMedias = styled.div`
 export const Menu = styled.ul`
   display: flex;
   flex-direction: row;
+  margin: 4px 16px;
   gap: 16px;
   font-size: 14px;
   font-weight: bold;

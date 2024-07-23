@@ -1,5 +1,5 @@
 import { GlobalCss } from '../styles.ts'
-import Home from './components/Home/index.tsx'
+import Home from './components/Home'
 
 function App() {
   return (
