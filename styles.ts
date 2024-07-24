@@ -22,6 +22,10 @@ export const GlobalCss = createGlobalStyle`
     list-style: none;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: ${colors.night};
     color: ${colors.cityLights};
