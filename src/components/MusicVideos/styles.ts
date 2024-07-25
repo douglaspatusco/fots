@@ -109,35 +109,10 @@ export const ModalContent = styled.div`
   z-index: 1;
   max-width: 960px;
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
-
-    h4 {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    img {
-      height: 16px;
-      width: 16px;
-      cursor: pointer;
-    }
-  }
-
-  > img {
-    width: 100%;
-  }
-
-  img,
   iframe {
     display: block;
     max-width: 100%;
-  }
-
-  iframe {
-    width: 1080;
+    width: 940px;
     height: 480px;
   }
 `
