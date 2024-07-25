@@ -1,8 +1,8 @@
-import { VideoGradient, VideoContainer } from './styles'
+import { VideoGradient, Container } from './styles'
 
 const MainContent = () => {
   return (
-    <VideoContainer>
+    <Container>
       <VideoGradient />
       <iframe
         width="560"
@@ -14,7 +14,7 @@ const MainContent = () => {
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       ></iframe>
-    </VideoContainer>
+    </Container>
   )
 }
 

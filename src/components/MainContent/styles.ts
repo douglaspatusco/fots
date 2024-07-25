@@ -3,7 +3,7 @@ import { colors } from '../../../styles'
 
 export const Content = () => styled.div``
 
-export const VideoContainer = styled.div`
+export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;

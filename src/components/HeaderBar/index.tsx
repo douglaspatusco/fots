@@ -15,8 +15,8 @@ const Header = () => {
             <svg
               xmlnsXlink="http://www.w3.org/1999/xlink"
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="24px"
+              height="24px"
               viewBox="0 0 24 24"
               fill="none"
             >
@@ -42,8 +42,8 @@ const Header = () => {
             <svg
               xmlnsXlink="http://www.w3.org/1999/xlink"
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="24px"
+              height="24px"
               viewBox="0 0 24 24"
               fill="none"
             >
@@ -169,24 +169,16 @@ const Header = () => {
         <Logo src={logo} />
         <Menu>
           <li>
-            <a href="#" title="Music">
-              <p>MUSIC</p>
-            </a>
+            <a href="#main-content">MUSIC</a>
           </li>
           <li>
-            <a href="#" title="Videos">
-              <p>VIDEOS</p>
-            </a>
+            <a href="#videos">VIDEOS</a>
           </li>
           <li>
-            <a href="#" title="Photos">
-              <p>PHOTOS</p>
-            </a>
+            <a href="#photos">PHOTOS</a>
           </li>
           <li>
-            <a href="#" title="About us">
-              <p>ABOUT</p>
-            </a>
+            <a href="#about">ABOUT</a>
           </li>
         </Menu>
       </HeaderBar>
