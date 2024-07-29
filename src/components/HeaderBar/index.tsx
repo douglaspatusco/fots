@@ -166,7 +166,9 @@ const Header = () => {
             </svg>
           </a>
         </SocialMedias>
-        <Logo src={logo} />
+        <a href="#top-page">
+          <Logo src={logo} />
+        </a>
         <Menu>
           <li>
             <a href="#main-content">MUSIC</a>

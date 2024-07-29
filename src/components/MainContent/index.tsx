@@ -2,7 +2,7 @@ import { VideoGradient, Container } from './styles'
 
 const MainContent = () => {
   return (
-    <Container>
+    <Container id="main-content">
       <VideoGradient />
       <iframe
         width="560"

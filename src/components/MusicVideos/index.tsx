@@ -25,7 +25,7 @@ const MusicVideos = () => {
   }
 
   return (
-    <Container>
+    <Container id="videos">
       <CardImage
         style={{ backgroundImage: `url(${imTryingToTalk})` }}
         onClick={() => {
