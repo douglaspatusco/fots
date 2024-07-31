@@ -31,8 +31,8 @@ const MusicVideos = () => {
           })
         }}
       >
-        <h2>I'm Trying To Talk</h2>
-        <p>void</p>
+        <h2>{dados.void.imTryingToTalk.name}</h2>
+        <p>{dados.void.imTryingToTalk.album}</p>
       </CardImage>
       <CardImage
         style={{ backgroundImage: `url(${dados.void.beyondMe.image})` }}
@@ -43,8 +43,8 @@ const MusicVideos = () => {
           })
         }}
       >
-        <h2>Beyond Me</h2>
-        <p>void</p>
+        <h2>{dados.void.beyondMe.name}</h2>
+        <p>{dados.void.beyondMe.album}</p>
       </CardImage>
       <CardImage
         style={{ backgroundImage: `url(${dados.void.renascimento.image})` }}
@@ -55,14 +55,14 @@ const MusicVideos = () => {
           })
         }}
       >
-        <h2>RENASCIMENTO</h2>
-        <p>void</p>
+        <h2>{dados.void.renascimento.name}</h2>
+        <p>{dados.void.renascimento.album}</p>
       </CardImage>
       <CardLock
         style={{ backgroundImage: `url(${dados.void.thankYou.image})` }}
       >
-        <h2>Locked</h2>
-        <p>Coming soon</p>
+        <h2>{dados.void.thankYou.name}</h2>
+        <p>{dados.void.thankYou.album}</p>
       </CardLock>
       <Modal className={modal.isVisible ? 'is-visible' : ''}>
         <ModalContent>
