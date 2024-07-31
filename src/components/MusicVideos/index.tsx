@@ -1,10 +1,6 @@
-import imTryingToTalk from '../../assets/artes/albums/void/im-trying-to-talk.png'
-import beyondMe from '../../assets/artes/albums/void/beyond-me.png'
-import renascimento from '../../assets/artes/albums/void/renascimento.png'
-import thankYou from '../../assets/artes/albums/void/thank-you.png'
-
 import { Container, CardImage, CardLock, Modal, ModalContent } from './styles'
 import { useState } from 'react'
+import { dados } from '../../data'
 
 interface ModalState {
   isVisible: boolean
@@ -27,11 +23,11 @@ const MusicVideos = () => {
   return (
     <Container id="videos">
       <CardImage
-        style={{ backgroundImage: `url(${imTryingToTalk})` }}
+        style={{ backgroundImage: `url(${dados.void.imTryingToTalk.image})` }}
         onClick={() => {
           setModal({
             isVisible: true,
-            url: 'https://www.youtube.com/embed/MI3JO10syn4?si=L9urG1ruBCDbZoxi'
+            url: `${dados.void.imTryingToTalk.video}`
           })
         }}
       >
@@ -39,11 +35,11 @@ const MusicVideos = () => {
         <p>void</p>
       </CardImage>
       <CardImage
-        style={{ backgroundImage: `url(${beyondMe})` }}
+        style={{ backgroundImage: `url(${dados.void.beyondMe.image})` }}
         onClick={() => {
           setModal({
             isVisible: true,
-            url: 'https://www.youtube.com/embed/VyN6GvaEP-Q?si=oU4-D4hgrMRgROt1'
+            url: `${dados.void.beyondMe.video}`
           })
         }}
       >
@@ -51,18 +47,20 @@ const MusicVideos = () => {
         <p>void</p>
       </CardImage>
       <CardImage
-        style={{ backgroundImage: `url(${renascimento})` }}
+        style={{ backgroundImage: `url(${dados.void.renascimento.image})` }}
         onClick={() => {
           setModal({
             isVisible: true,
-            url: 'https://www.youtube.com/embed/C8h_o6khmUw?si=78hOI5B43p6ZjQ0K'
+            url: `${dados.void.renascimento.video}`
           })
         }}
       >
         <h2>RENASCIMENTO</h2>
         <p>void</p>
       </CardImage>
-      <CardLock style={{ backgroundImage: `url(${thankYou})` }}>
+      <CardLock
+        style={{ backgroundImage: `url(${dados.void.thankYou.image})` }}
+      >
         <h2>Locked</h2>
         <p>Coming soon</p>
       </CardLock>
