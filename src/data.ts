@@ -4,7 +4,7 @@ export const dados = {
       name: "I'm Trying To Talk",
       album: 'void',
       image:
-        'https://github.com/eyelexx/fots/blob/main/src/assets/artes/albums/void/im-trying-to-talk.png',
+        'https://raw.githubusercontent.com/eyelexx/fots/main/src/assets/artes/albums/void/im-trying-to-talk.png',
       video: 'https://www.youtube.com/embed/MI3JO10syn4?si=L9urG1ruBCDbZoxi'
     },
     beyondMe: {
