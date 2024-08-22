@@ -1,3 +1,4 @@
+import About from '../About'
 import Footer from '../Footer'
 import HeaderBar from '../HeaderBar'
 import MainContent from '../MainContent'
@@ -9,6 +10,7 @@ const Home = () => {
       <HeaderBar />
       <MainContent />
       <MusicVideos />
+      <About />
       <Footer />
     </div>
   )
