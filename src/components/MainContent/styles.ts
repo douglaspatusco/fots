@@ -11,13 +11,13 @@ export const Container = styled.section`
   margin-top: 4em;
 
   iframe {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 100vw;
     height: 100%;
   }
 `
 export const VideoGradient = styled.div`
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
