@@ -4,15 +4,22 @@ import HeaderBar from '../HeaderBar'
 import MainContent from '../MainContent'
 import MusicVideos from '../MusicVideos'
 
+import logo from '../../assets/fots_sem_fundo.png'
+import { HomeContainer, Logo } from './styles'
+
 const Home = () => {
   return (
-    <div id="top-page">
+    <HomeContainer id="top-page">
+      <a href="#top-page">
+        <Logo src={logo} />
+      </a>
+
       <HeaderBar />
       <MainContent />
       <MusicVideos />
       <About />
       <Footer />
-    </div>
+    </HomeContainer>
   )
 }
 
