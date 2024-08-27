@@ -1,6 +1,4 @@
 import { Container, HeaderBar, Menu, SocialMedias } from './styles'
-import logo from '../../assets/fots_sem_fundo.png'
-import { Logo } from './styles'
 
 const Header = () => {
   return (
@@ -166,9 +164,6 @@ const Header = () => {
             </svg>
           </a>
         </SocialMedias>
-        <a href="#top-page">
-          <Logo src={logo} />
-        </a>
         <Menu>
           <li>
             <a href="#main-content">MUSIC</a>
