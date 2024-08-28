@@ -47,24 +47,6 @@ export const Menu = styled.ul`
     transform: scale(1.1);
   }
 
-  &.active {
-    transform: translateX(0);
-  }
-
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .fade-in {
-    animation: navLinkFade 1s ease;
-  }
-
   @media (max-width: ${breakpoints.tablet}) {
     flex-direction: column;
     justify-content: space-around;
@@ -78,6 +60,24 @@ export const Menu = styled.ul`
 
     transform: translateX(100%);
     transition: 0.3s ease;
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fade-in {
+      animation: navLinkFade 1s ease;
+    }
   }
 `
 export const Hamburguer = styled.div`
