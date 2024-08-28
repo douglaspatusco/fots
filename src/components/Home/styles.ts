@@ -1,4 +1,5 @@
 import { styled } from 'styled-components'
+import { breakpoints } from '../../../styles'
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ export const HomeContainer = styled.div`
 export const Logo = styled.img`
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 11;
 
   width: 150px;
   max-width: 100%;
@@ -25,5 +26,11 @@ export const Logo = styled.img`
 
   &:hover {
     transform: scale(1.5);
+  }
+
+  @media (max-width: ${breakpoints.cel}) {
+    z-index: 10;
+    width: 100px;
+    margin-top: 1em;
   }
 `

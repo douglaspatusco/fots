@@ -7,7 +7,7 @@ export const Container = styled.header`
   left: 0;
   width: 100%;
   height: 8em;
-  z-index: -1;
+  z-index: 10;
 `
 
 export const HeaderBar = styled.div`
@@ -15,6 +15,10 @@ export const HeaderBar = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 1em;
+
+  @media (max-width: ${breakpoints.cel}) {
+    justify-content: flex-end;
+  }
 `
 
 export const SocialMedias = styled.div`
@@ -27,12 +31,16 @@ export const SocialMedias = styled.div`
     color: #fff;
     transform: scale(1.1);
   }
+
+  @media (max-width: ${breakpoints.cel}) {
+    display: none;
+  }
 `
 
 export const Menu = styled.ul`
   display: flex;
   flex-direction: row;
-  margin: 4px 16px;
+  margin: 0.25em 1em;
   gap: 16px;
   font-size: 14px;
   font-weight: bold;
@@ -48,6 +56,72 @@ export const Menu = styled.ul`
   }
 
   @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    justify-content: space-around;
+
+    position: absolute;
+    top: -0.5vh;
+    right: -1em;
+    width: 50vw;
+    height: 80vh;
+    background-color: ${colors.night};
+
+    transform: translateX(100%);
+    transition: 0.3s ease;
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fade-in {
+      animation: navLinkFade 1s ease;
+    }
+  }
+
+  @media (max-width: ${breakpoints.cel}) {
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+  }
+`
+export const Hamburguer = styled.div`
+  width: 2em;
+  margin: 0.25em 1em;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1;
+
+  div {
+    height: 2px;
+    display: block;
+    width: 100%;
+    background-color: ${colors.cityLights};
+    margin-bottom: 4px;
+    transition: 0.3s;
+  }
+  .active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+
+  .active .line2 {
+    opacity: 0;
+  }
+
+  .active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  @media (min-width: ${breakpoints.tablet}) {
     display: none;
   }
 `

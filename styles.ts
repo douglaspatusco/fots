@@ -2,7 +2,8 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 export const breakpoints = {
   desktop: '1024px',
-  tablet: '768px'
+  tablet: '768px',
+  cel: '320px'
 }
 
 export const colors = {
@@ -29,6 +30,7 @@ export const GlobalCss = createGlobalStyle`
   body {
     background-color: ${colors.night};
     color: ${colors.cityLights};
+    overflow-x: hidden;
   }
 
   a {

@@ -1,6 +1,13 @@
-import { Container, HeaderBar, Menu, SocialMedias } from './styles'
+import { useState } from 'react'
+import { Container, Hamburguer, HeaderBar, Menu, SocialMedias } from './styles'
 
 const Header = () => {
+  const [classActive, setClassActive] = useState('')
+
+  const toggleClassActive = () => {
+    setClassActive(classActive === '' ? 'active' : '')
+  }
+
   return (
     <Container>
       <HeaderBar>
@@ -164,20 +171,49 @@ const Header = () => {
             </svg>
           </a>
         </SocialMedias>
-        <Menu>
+        <Menu className={classActive}>
           <li>
-            <a href="#main-content">MUSIC</a>
+            <a
+              className={classActive ? 'fade-in' : ''}
+              href="#main-content"
+              onClick={toggleClassActive}
+            >
+              MUSIC
+            </a>
           </li>
           <li>
-            <a href="#videos">VIDEOS</a>
+            <a
+              className={classActive ? 'fade-in' : ''}
+              href="#videos"
+              onClick={toggleClassActive}
+            >
+              VIDEOS
+            </a>
           </li>
           <li>
-            <a href="#photos">PHOTOS</a>
+            <a
+              className={classActive ? 'fade-in' : ''}
+              href="#photos"
+              onClick={toggleClassActive}
+            >
+              PHOTOS
+            </a>
           </li>
           <li>
-            <a href="#about">ABOUT</a>
+            <a
+              className={classActive ? 'fade-in' : ''}
+              href="#about"
+              onClick={toggleClassActive}
+            >
+              ABOUT
+            </a>
           </li>
         </Menu>
+        <Hamburguer onClick={toggleClassActive} className={classActive}>
+          <div className={`line1 ${classActive}`} />
+          <div className={`line2 ${classActive}`} />
+          <div className={`line3 ${classActive}`} />
+        </Hamburguer>
       </HeaderBar>
     </Container>
   )
