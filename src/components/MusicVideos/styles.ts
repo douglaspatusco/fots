@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../../styles'
 
 export const Container = styled.section`
   display: flex;
@@ -7,6 +8,14 @@ export const Container = styled.section`
 
   height: 100vh;
   padding: 1em;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    height: 100vh;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 1em 1em;
+    padding: 16vh 0;
+  }
 `
 
 export const CardImage = styled.div`
@@ -41,6 +50,9 @@ export const CardImage = styled.div`
       opacity: 100%;
       transition: 1s;
     }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
   }
 `
 
