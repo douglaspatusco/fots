@@ -15,6 +15,10 @@ export const HeaderBar = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 1em;
+
+  @media (max-width: ${breakpoints.cel}) {
+    justify-content: flex-end;
+  }
 `
 
 export const SocialMedias = styled.div`
@@ -26,6 +30,10 @@ export const SocialMedias = styled.div`
   svg:hover {
     color: #fff;
     transform: scale(1.1);
+  }
+
+  @media (max-width: ${breakpoints.cel}) {
+    display: none;
   }
 `
 
@@ -78,6 +86,12 @@ export const Menu = styled.ul`
     .fade-in {
       animation: navLinkFade 1s ease;
     }
+  }
+
+  @media (max-width: ${breakpoints.cel}) {
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
   }
 `
 export const Hamburguer = styled.div`

@@ -16,6 +16,10 @@ export const Container = styled.section`
     margin: 1em 1em;
     padding: 16vh 0;
   }
+
+  @media (max-width: ${breakpoints.cel}) {
+    height: auto;
+  }
 `
 
 export const CardImage = styled.div`
@@ -52,7 +56,7 @@ export const CardImage = styled.div`
     }
   }
 
-  @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.cel}) {
   }
 `
 
