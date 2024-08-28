@@ -16,7 +16,7 @@ export const HomeContainer = styled.div`
 export const Logo = styled.img`
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 11;
 
   width: 150px;
   max-width: 100%;

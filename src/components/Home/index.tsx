@@ -6,10 +6,17 @@ import MusicVideos from '../MusicVideos'
 
 import logo from '../../assets/fots_sem_fundo.png'
 import { HomeContainer, Logo } from './styles'
+import { useState } from 'react'
 
 const Home = () => {
+  const [classActive, setClassActive] = useState('')
+
+  const toggleClassActive = () => {
+    setClassActive(classActive === '' ? 'active' : '')
+  }
+
   return (
-    <HomeContainer id="top-page">
+    <HomeContainer id="top-page" onClick={toggleClassActive}>
       <a href="#top-page">
         <Logo src={logo} />
       </a>
