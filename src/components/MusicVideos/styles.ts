@@ -22,6 +22,7 @@ export const Container = styled.section`
 export const CardImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   filter: grayscale(100%) brightness(75%);
 
   width: 20em;
