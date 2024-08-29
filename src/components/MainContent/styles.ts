@@ -13,7 +13,7 @@ export const Container = styled.section`
   iframe {
     position: relative;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
   }
 `
 export const VideoGradient = styled.div`

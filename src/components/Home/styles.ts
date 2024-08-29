@@ -28,7 +28,7 @@ export const Logo = styled.img`
     transform: scale(1.5);
   }
 
-  @media (max-width: ${breakpoints.cel}) {
+  @media (max-width: ${breakpoints.mobile}) {
     z-index: 10;
     width: 100px;
     margin-top: 1em;

@@ -16,24 +16,8 @@ export const HeaderBar = styled.div`
   justify-content: space-between;
   margin: 1em;
 
-  @media (max-width: ${breakpoints.cel}) {
+  @media (max-width: 480px) {
     justify-content: flex-end;
-  }
-`
-
-export const SocialMedias = styled.div`
-  display: flex;
-  gap: 32px;
-  margin: 4px 16px;
-  color: ${colors.cityLights};
-
-  svg:hover {
-    color: #fff;
-    transform: scale(1.1);
-  }
-
-  @media (max-width: ${breakpoints.cel}) {
-    display: none;
   }
 `
 
@@ -88,7 +72,7 @@ export const Menu = styled.ul`
     }
   }
 
-  @media (max-width: ${breakpoints.cel}) {
+  @media (max-width: ${breakpoints.mobile}) {
     width: 100vw;
     height: 100vh;
     z-index: 2;
