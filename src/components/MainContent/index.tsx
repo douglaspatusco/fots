@@ -3,7 +3,6 @@ import { VideoGradient, Container } from './styles'
 const MainContent = () => {
   return (
     <Container id="main-content">
-      <VideoGradient />
       <iframe
         width="560"
         height="315"
@@ -14,6 +13,7 @@ const MainContent = () => {
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       ></iframe>
+      <VideoGradient />
     </Container>
   )
 }

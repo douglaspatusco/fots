@@ -7,18 +7,15 @@ export const Container = styled.section`
   justify-content: center;
 
   height: 100vh;
-  padding: 1em;
 
   @media (max-width: ${breakpoints.tablet}) {
-    height: 100vh;
     gap: 10px;
     flex-wrap: wrap;
-    margin: 1em 1em;
-    padding: 16vh 0;
+    padding-top: 8em;
+    height: 100%;
   }
 
   @media (max-width: ${breakpoints.mobile}) {
-    height: auto;
   }
 `
 
@@ -56,7 +53,16 @@ export const CardImage = styled.div`
     }
   }
 
-  @media (max-width: ${breakpoints.mobile}) {
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 100%;
+    height: 768px;
+    filter: none;
+
+    p,
+    h2 {
+      opacity: unset;
+      transition: none;
+    }
   }
 `
 
@@ -91,6 +97,17 @@ export const CardLock = styled.div`
     p {
       opacity: 100%;
       transition: 1s;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 100%;
+    height: 768px;
+
+    p,
+    h2 {
+      opacity: unset;
+      transition: none;
     }
   }
 `
