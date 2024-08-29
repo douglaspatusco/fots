@@ -42,6 +42,7 @@ export const Menu = styled.ul`
   @media (max-width: ${breakpoints.tablet}) {
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 
     position: absolute;
     top: -0.5vh;
@@ -70,6 +71,12 @@ export const Menu = styled.ul`
     .fade-in {
       animation: navLinkFade 1s ease;
     }
+  }
+
+  @media (max-width: 480px) {
+    width: 100vw;
+    height: 101vh;
+    z-index: 2;
   }
 
   @media (max-width: ${breakpoints.mobile}) {

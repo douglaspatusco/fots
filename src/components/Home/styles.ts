@@ -28,6 +28,10 @@ export const Logo = styled.img`
     transform: scale(1.5);
   }
 
+  @media (max-width: ${breakpoints.tablet}) {
+    z-index: 10;
+  }
+
   @media (max-width: ${breakpoints.mobile}) {
     z-index: 10;
   }

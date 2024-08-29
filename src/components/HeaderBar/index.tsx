@@ -50,6 +50,7 @@ const Header = () => {
               ABOUT
             </a>
           </li>
+          <SocialMedias isHeader={false} />
         </Menu>
         <Hamburguer onClick={toggleClassActive} className={classActive}>
           <div className={`line1 ${classActive}`} />
