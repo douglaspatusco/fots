@@ -30,7 +30,5 @@ export const Logo = styled.img`
 
   @media (max-width: ${breakpoints.mobile}) {
     z-index: 10;
-    width: 100px;
-    margin-top: 1em;
   }
 `
