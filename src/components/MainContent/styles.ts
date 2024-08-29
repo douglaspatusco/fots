@@ -21,9 +21,6 @@ export const Container = styled.section`
   }
 
   @media (max-width: ${breakpoints.mobile}) {
-    iframe {
-      height: 50vh;
-    }
   }
 `
 export const VideoGradient = styled.div`
