@@ -47,7 +47,7 @@ export const Menu = styled.ul`
     top: -0.5vh;
     right: -1em;
     width: 50vw;
-    height: 80vh;
+    height: 101vh;
     background-color: ${colors.night};
 
     transform: translateX(100%);
@@ -105,7 +105,7 @@ export const Hamburguer = styled.div`
     transform: rotate(45deg) translate(-5px, -7px);
   }
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: 769px) {
     display: none;
   }
 `
