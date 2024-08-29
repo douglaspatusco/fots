@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../../styles'
+import { breakpoints, colors } from '../../../styles'
 
 export const Content = () => styled.div``
 
@@ -14,6 +14,16 @@ export const Container = styled.section`
     position: relative;
     width: 100vw;
     height: 100vh;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-top: 0;
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    iframe {
+      height: 50vh;
+    }
   }
 `
 export const VideoGradient = styled.div`

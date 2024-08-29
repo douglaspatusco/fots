@@ -74,7 +74,7 @@ export const Menu = styled.ul`
 
   @media (max-width: ${breakpoints.mobile}) {
     width: 100vw;
-    height: 100vh;
+    height: 101vh;
     z-index: 2;
   }
 `
