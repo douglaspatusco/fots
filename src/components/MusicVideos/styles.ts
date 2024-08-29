@@ -17,7 +17,7 @@ export const Container = styled.section`
     padding: 16vh 0;
   }
 
-  @media (max-width: ${breakpoints.cel}) {
+  @media (max-width: ${breakpoints.mobile}) {
     height: auto;
   }
 `
@@ -56,7 +56,7 @@ export const CardImage = styled.div`
     }
   }
 
-  @media (max-width: ${breakpoints.cel}) {
+  @media (max-width: ${breakpoints.mobile}) {
   }
 `
 
