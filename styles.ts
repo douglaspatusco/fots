@@ -2,9 +2,11 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 export const breakpoints = {
   largeDesktop: '1440px',
-  desktop: '1025px',
+  desktop: '1024px',
   tablet: '768px',
-  mobile: '360px'
+  mobileL: '480px',
+  mobileM: '375px',
+  mobileS: '320px'
 }
 
 export const colors = {

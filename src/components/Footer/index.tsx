@@ -1,10 +1,10 @@
-import SocialMedias from '../SocialMedias'
+import SocialLinks from '../SocialLinks'
 import { Container, Rights } from './styles'
 
 const Footer = () => {
   return (
     <Container>
-      <SocialMedias isHeader={false} />
+      <SocialLinks isHeader={false} />
       <Rights>
         <p>&copy; 2024 Flying Over The Sea</p>
         <p>

@@ -32,7 +32,7 @@ export const Logo = styled.img`
     z-index: 10;
   }
 
-  @media (max-width: ${breakpoints.mobile}) {
+  @media (max-width: ${breakpoints.mobileS}) {
     z-index: 10;
   }
 `
