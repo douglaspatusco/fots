@@ -20,7 +20,7 @@ const Header = () => {
               href="#main-content"
               onClick={toggleClassActive}
             >
-              MUSIC
+              HOME
             </a>
           </li>
           <li>
