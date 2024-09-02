@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
 import { colors } from '../../../styles'
 
-export const Medias = styled.div`
+export const SocialMediasContainer = styled.div`
   display: flex;
   gap: 32px;
   margin: 4px 16px;
@@ -12,3 +12,4 @@ export const Medias = styled.div`
     transform: scale(1.1);
   }
 `
+export default SocialMediasContainer

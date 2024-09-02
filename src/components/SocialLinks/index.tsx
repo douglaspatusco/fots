@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Medias } from './styles'
+import { SocialMediasContainer } from './styles'
 
 interface MediaProps {
   isHeader: boolean
 }
 
-const SocialMedias = ({ isHeader }: MediaProps) => {
+const SocialLinks = ({ isHeader }: MediaProps) => {
   const [isHidden, setIsHidden] = useState(false)
 
   useEffect(() => {
@@ -23,8 +23,9 @@ const SocialMedias = ({ isHeader }: MediaProps) => {
 
   return (
     !isHidden && (
-      <Medias>
+      <SocialMediasContainer className={'fade-in social-medias'}>
         <a
+          className={'fade-in'}
           href="https://www.instagram.com/flyingotsea"
           title="Instagram"
           target="_blank"
@@ -52,6 +53,7 @@ const SocialMedias = ({ isHeader }: MediaProps) => {
           </svg>
         </a>
         <a
+          className={'fade-in'}
           href="https://www.youtube.com/@FlyingOverTheSea"
           title="YouTube"
           target="_blank"
@@ -71,6 +73,7 @@ const SocialMedias = ({ isHeader }: MediaProps) => {
           </svg>
         </a>
         <a
+          className={'fade-in'}
           href="https://soundcloud.com/flying-over-the-sea"
           title="SoundCloud"
           target="_blank"
@@ -182,9 +185,9 @@ z"
             </g>
           </svg>
         </a>
-      </Medias>
+      </SocialMediasContainer>
     )
   )
 }
 
-export default SocialMedias
+export default SocialLinks

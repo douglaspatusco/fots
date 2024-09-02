@@ -15,7 +15,7 @@ export const Container = styled.section`
     height: 100%;
   }
 
-  @media (max-width: ${breakpoints.mobile}) {
+  @media (max-width: ${breakpoints.mobileS}) {
   }
 `
 

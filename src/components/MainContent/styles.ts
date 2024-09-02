@@ -20,7 +20,7 @@ export const Container = styled.section`
     margin-top: 0;
   }
 
-  @media (max-width: ${breakpoints.mobile}) {
+  @media (max-width: ${breakpoints.mobileS}) {
   }
 `
 export const VideoGradient = styled.div`
