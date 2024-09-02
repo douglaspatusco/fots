@@ -2,11 +2,16 @@ import styled from 'styled-components'
 import { breakpoints } from '../../../styles'
 
 export const Container = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin: 25vh 0 25vh 0;
 
-  height: 100vh;
+  height: 100%;
+
+  @media (min-width: ${breakpoints.largeDesktop}) {
+    display: flex;
+  }
 
   @media (max-width: ${breakpoints.tablet}) {
     gap: 10px;
