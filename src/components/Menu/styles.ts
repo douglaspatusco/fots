@@ -82,28 +82,26 @@ export const Hamburguer = styled.div`
   width: 2em;
   margin: 0.25em 1em;
   cursor: pointer;
-  transition: 0.3s;
   z-index: 1;
 
-  div {
+  &.active {
+    .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .line:nth-child(2) {
+      opacity: 0;
+    }
+    .line:nth-child(3) {
+      transform: rotate(-45deg) translate(2px, -5px);
+    }
+  }
+
+  .line {
     height: 2px;
-    display: block;
     width: 100%;
     background-color: ${colors.cityLights};
     margin-bottom: 4px;
     transition: 0.3s;
-  }
-
-  .active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-  }
-
-  .active .line2 {
-    opacity: 0;
-  }
-
-  .active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
   }
 
   @media (min-width: 769px) {
