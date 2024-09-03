@@ -9,18 +9,15 @@ export const Container = styled.section`
   justify-content: center;
   height: 100vh;
   margin-top: 4em;
+  position: relative;
 
   iframe {
-    position: relative;
     width: 100vw;
     height: 100vh;
   }
 
   @media (max-width: ${breakpoints.tablet}) {
     margin-top: 0;
-  }
-
-  @media (max-width: ${breakpoints.mobileS}) {
   }
 `
 export const VideoGradient = styled.div`
@@ -43,6 +40,6 @@ export const VideoGradient = styled.div`
     10% 100%;
 
   @media (max-width: ${breakpoints.mobileL}) {
-    display: none;
+    /* display: none; */
   }
 `
