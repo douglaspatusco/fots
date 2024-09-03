@@ -6,6 +6,7 @@ export const Container = styled.section`
   grid-template-columns: 1fr 1fr;
   gap: 1em;
   margin: 25vh 0 25vh 0;
+  padding-top: 8em;
 
   height: 100%;
 
@@ -21,6 +22,8 @@ export const Container = styled.section`
   }
 
   @media (max-width: ${breakpoints.mobileS}) {
+    display: block;
+    width: 100%;
   }
 `
 
@@ -69,6 +72,11 @@ export const CardImage = styled.div`
       opacity: unset;
       transition: none;
     }
+  }
+
+  @media (max-width: ${breakpoints.mobileL}) {
+    width: 100%;
+    height: 100vh;
   }
 `
 
