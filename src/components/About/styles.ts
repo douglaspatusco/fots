@@ -10,6 +10,9 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+  gap: 4em;
 
   @media (max-width: ${breakpoints.tablet}) {
     padding: 8em 0;

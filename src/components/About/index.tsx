@@ -3,6 +3,7 @@ import { Container } from '../About/styles'
 const About = () => {
   return (
     <Container id="about">
+      <h3>ABOUT ME</h3>
       <div>
         <p>
           Music entered my life when I was a child. My mother would take me to
