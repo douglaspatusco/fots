@@ -50,10 +50,13 @@ const Menu = () => {
         </li>
         <SocialLinks isHeader={false} />
       </MenuItems>
-      <Hamburguer onClick={toggleClassActive} className={classActive}>
-        <div className={`line1 ${classActive}`} />
-        <div className={`line2 ${classActive}`} />
-        <div className={`line3 ${classActive}`} />
+      <Hamburguer
+        onClick={toggleClassActive}
+        className={`menu-hamburguer ${classActive}`}
+      >
+        <div className={`line ${classActive}`} />
+        <div className={`line ${classActive}`} />
+        <div className={`line ${classActive}`} />
       </Hamburguer>
     </MenuContainer>
   )
