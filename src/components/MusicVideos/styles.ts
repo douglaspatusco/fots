@@ -34,12 +34,7 @@ export const VideosContainer = styled.div`
     width: 100%;
   }
 
-  @media (max-width: ${breakpoints.mobileS}) {
-    display: block;
-    width: 100%;
-  }
-
-  @media (max-width: ${breakpoints.mobileM}) {
+  @media (max-width: ${breakpoints.mobileL}) {
     display: block;
     width: 100%;
   }
