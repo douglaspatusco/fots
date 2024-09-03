@@ -2,26 +2,44 @@ import styled from 'styled-components'
 import { breakpoints } from '../../../styles'
 
 export const Container = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4em;
+
+  height: 100%;
   margin: 25vh 0 25vh 0;
   padding-top: 8em;
 
-  height: 100%;
+  @media (max-width: ${breakpoints.tablet}) {
+    gap: 4em;
+    height: 100%;
+    width: 100%;
+  }
+`
+
+export const VideosContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
 
   @media (min-width: ${breakpoints.largeDesktop}) {
     display: flex;
   }
 
   @media (max-width: ${breakpoints.tablet}) {
-    gap: 10px;
+    gap: 1em;
     flex-wrap: wrap;
-    padding-top: 8em;
     height: 100%;
+    width: 100%;
   }
 
   @media (max-width: ${breakpoints.mobileS}) {
+    display: block;
+    width: 100%;
+  }
+
+  @media (max-width: ${breakpoints.mobileM}) {
     display: block;
     width: 100%;
   }

@@ -41,4 +41,8 @@ export const VideoGradient = styled.div`
     100% 10%,
     10% 100%,
     10% 100%;
+
+  @media (max-width: ${breakpoints.mobileL}) {
+    display: none;
+  }
 `
