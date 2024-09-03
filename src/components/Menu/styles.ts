@@ -71,13 +71,11 @@ export const MenuItems = styled.ul`
   @media (max-width: ${breakpoints.mobileL}) {
     width: 100vw;
     height: 101vh;
-    z-index: 2;
   }
 
   @media (max-width: ${breakpoints.mobileS}) {
     width: 100vw;
     height: 101vh;
-    z-index: 2;
   }
 `
 export const Hamburguer = styled.div`
