@@ -1,30 +1,17 @@
-# React + TypeScript + Vite
+# Flying Over The Sea (Music Band)
+[Official Website]: https://fots.com.br
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+To build this project, I used React, Typescript and Styled Components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a website that aims to showcase the musical work of the band Flying Over The Sea. A metal band from Rio de Janeiro.
 
-## Expanding the ESLint configuration
+It starts with a header that has links to social networks, the band's logo and a menu on the right side. When you hover over the logo, it grows, and when you click on a link in the menu, the page scrolls to the corresponding section.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The page starts with a full-screen video clip ready to play and introduce the user to the band's style.
 
-- Configure the top-level `parserOptions` property like this:
+Next, we have a gallery of video clips, where when you click on the corresponding image, the video opens in a window in the center of the screen, and when you click outside the video, it stops playing and the window closes.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Finally, we have an About Me section, telling a little about the band's history.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+And finally, the footer with the band's social media links.
