@@ -1,5 +1,5 @@
 # Flying Over The Sea (Music Band)
-[Official Website]: https://fots.com.br
+[Official Website](https://fots.com.br)
 
 
 To build this project, I used React, Typescript and Styled Components.
