@@ -19,15 +19,14 @@ export const MenuItems = styled.ul`
   gap: 16px;
   font-size: 14px;
   font-weight: bold;
-  color: ${colors.cityLights};
+  color: ${({ theme }) => theme.text};
 
   li {
     padding: 4px 8px;
   }
 
   li:hover {
-    color: #fff;
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 
   @media (max-width: ${breakpoints.tablet}) {

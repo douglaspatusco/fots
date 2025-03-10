@@ -10,10 +10,11 @@ export const breakpoints = {
 }
 
 export const colors = {
-  cityLights: '#dfe6e9',
-  snoozingBreeze: '#b2bec3',
-  americanRiver: '#636e72',
-  draculaOrchid: '#2d3436',
+  snowWhite: '#FFFFFF',
+  cityLights: '#DFE6E9',
+  snoozingBreeze: '#B2BEC3',
+  americanRiver: '#636E72',
+  draculaOrchid: '#2D3436',
   night: '#0A0C0D'
 }
 
@@ -31,8 +32,8 @@ export const GlobalCss = createGlobalStyle`
   }
 
   body {
-    background-color: ${colors.night};
-    color: ${colors.cityLights};
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.text};
     overflow-x: hidden;
   }
 

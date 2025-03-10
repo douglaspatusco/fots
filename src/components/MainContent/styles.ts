@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, colors } from '../../../styles'
+import { breakpoints } from '../../../styles'
 
 export const Content = () => styled.div``
 
@@ -28,10 +28,14 @@ export const VideoGradient = styled.div`
   pointer-events: none;
 
   background:
-    linear-gradient(to bottom, ${colors.night}, transparent) 50% 0%,
-    linear-gradient(to top, ${colors.night}, transparent) 50% 100%,
-    linear-gradient(to right, ${colors.night}, transparent) 0% 50%,
-    linear-gradient(to left, ${colors.night}, transparent) 100% 50%;
+    linear-gradient(to bottom, ${({ theme }) => theme.background}, transparent)
+      50% 0%,
+    linear-gradient(to top, ${({ theme }) => theme.background}, transparent) 50%
+      100%,
+    linear-gradient(to right, ${({ theme }) => theme.background}, transparent)
+      0% 50%,
+    linear-gradient(to left, ${({ theme }) => theme.background}, transparent)
+      100% 50%;
   background-repeat: no-repeat;
   background-size:
     100% 10%,

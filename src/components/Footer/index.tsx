@@ -1,10 +1,12 @@
 import SocialLinks from '../SocialLinks'
+import ThemeButton from '../ThemeButton'
 import { Container, Rights } from './styles'
 
 const Footer = () => {
   return (
     <Container>
       <SocialLinks isHeader={false} />
+      <ThemeButton />
       <Rights>
         <p>&copy; 2024 Flying Over The Sea</p>
         <p>

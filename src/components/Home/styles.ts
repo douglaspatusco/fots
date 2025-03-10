@@ -23,6 +23,7 @@ export const Logo = styled.img`
   max-width: 100%;
   margin-top: 24px;
   transition: transform 0.5s ease;
+  filter: ${({ theme }) => theme.filter};
 
   &:hover {
     transform: scale(1.5);

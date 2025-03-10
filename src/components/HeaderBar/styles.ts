@@ -14,7 +14,7 @@ export const HeaderBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1em;
+  padding: 1em;
 
   @media (max-width: ${breakpoints.mobileL}) {
     justify-content: flex-end;
