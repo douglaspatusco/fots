@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, breakpoints } from '../../../styles'
+import { breakpoints } from '../../../styles'
 
 export const MenuContainer = styled.nav`
   display: flex;
@@ -39,7 +39,7 @@ export const MenuItems = styled.ul`
     right: -1em;
     width: 50vw;
     height: 101vh;
-    background-color: ${colors.night};
+    background-color: ${({ theme }) => theme.background};
 
     transform: translateX(100%);
     transition: 0.3s ease;
@@ -98,7 +98,7 @@ export const Hamburguer = styled.div`
   .line {
     height: 2px;
     width: 100%;
-    background-color: ${colors.cityLights};
+    background-color: ${({ theme }) => theme.text};
     margin-bottom: 4px;
     transition: 0.3s;
   }

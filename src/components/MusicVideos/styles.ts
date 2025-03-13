@@ -60,6 +60,8 @@ export const CardImage = styled.div`
   h2,
   p {
     opacity: 0%;
+    color: white;
+    mix-blend-mode: difference;
   }
 
   &:hover {
@@ -112,6 +114,8 @@ export const CardLock = styled.div`
   h2,
   p {
     opacity: 0%;
+    color: white;
+    mix-blend-mode: difference;
   }
 
   &:hover {
