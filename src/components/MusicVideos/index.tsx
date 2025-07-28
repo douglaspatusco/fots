@@ -1,13 +1,15 @@
+import { useState } from 'react'
+import { tracks } from '../../data'
+
 import {
   VideosContainer,
   CardImage,
   CardLock,
   Modal,
   ModalContent,
-  Container
+  Container,
+  AlbumSection
 } from './styles'
-import { useState } from 'react'
-import { dados } from '../../data'
 
 interface ModalState {
   isVisible: boolean
@@ -20,7 +22,7 @@ const MusicVideos = () => {
     url: ''
   })
 
-  const closemodal = () => {
+  const closeModal = () => {
     setModal({
       isVisible: false,
       url: ''
@@ -30,70 +32,57 @@ const MusicVideos = () => {
   return (
     <Container id="videos">
       <h3>MUSIC VIDEOS</h3>
-      <VideosContainer>
-        <CardImage
-          style={{ backgroundImage: `url(${dados.void.imTryingToTalk.image})` }}
-          onClick={() => {
-            setModal({
-              isVisible: true,
-              url: `${dados.void.imTryingToTalk.video}`
-            })
-          }}
-        >
-          <h2>{dados.void.imTryingToTalk.name}</h2>
-          <p>{dados.void.imTryingToTalk.album}</p>
-        </CardImage>
-        <CardImage
-          style={{ backgroundImage: `url(${dados.void.beyondMe.image})` }}
-          onClick={() => {
-            setModal({
-              isVisible: true,
-              url: `${dados.void.beyondMe.video}`
-            })
-          }}
-        >
-          <h2>{dados.void.beyondMe.name}</h2>
-          <p>{dados.void.beyondMe.album}</p>
-        </CardImage>
-        <CardImage
-          style={{ backgroundImage: `url(${dados.void.renascimento.image})` }}
-          onClick={() => {
-            setModal({
-              isVisible: true,
-              url: `${dados.void.renascimento.video}`
-            })
-          }}
-        >
-          <h2>{dados.void.renascimento.name}</h2>
-          <p>{dados.void.renascimento.album}</p>
-        </CardImage>
-        <CardLock
-          style={{ backgroundImage: `url(${dados.void.thankYou.image})` }}
-        >
-          <h2>{dados.void.thankYou.name}</h2>
-          <p>{dados.void.thankYou.album}</p>
-        </CardLock>
-        <Modal className={modal.isVisible ? 'is-visible' : ''}>
-          <ModalContent>
-            <iframe
-              width="1080"
-              height="720"
-              src={modal.url}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </ModalContent>
-          <div
-            className="overlay"
-            onClick={() => {
-              closemodal()
-            }}
-          ></div>
-        </Modal>
-      </VideosContainer>
+      {['void', 'Dear Whispers'].map((albumKey) => {
+        const albumVideos = tracks.filter((video) => video.album === albumKey)
+
+        return (
+          <AlbumSection key={albumKey}>
+            <h4>{albumKey}</h4>
+            <VideosContainer>
+              {albumVideos.map((video) =>
+                video.video ? (
+                  <CardImage
+                    key={video.id}
+                    style={{ backgroundImage: `url(${video.image})` }}
+                    onClick={() => {
+                      setModal({
+                        isVisible: true,
+                        url: video.video
+                      })
+                    }}
+                  >
+                    <h2>{video.name}</h2>
+                    <p>{video.album}</p>
+                  </CardImage>
+                ) : (
+                  <CardLock
+                    key={video.id}
+                    style={{ backgroundImage: `url(${video.image})` }}
+                  >
+                    <h2>{video.name}</h2>
+                    <p>{video.album}</p>
+                  </CardLock>
+                )
+              )}
+            </VideosContainer>
+          </AlbumSection>
+        )
+      })}
+      <Modal className={modal.isVisible ? 'is-visible' : ''}>
+        <ModalContent>
+          <iframe
+            width="1080"
+            height="720"
+            src={modal.url}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </ModalContent>
+        <div className="overlay" onClick={closeModal}></div>
+      </Modal>
     </Container>
   )
 }

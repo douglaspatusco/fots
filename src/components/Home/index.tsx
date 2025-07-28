@@ -4,7 +4,7 @@ import HeaderBar from '../HeaderBar'
 import MainContent from '../MainContent'
 import MusicVideos from '../MusicVideos'
 
-import logo from '../../assets/fots_sem_fundo.png'
+import logo from '../../assets/icons/fots_sem_fundo.png'
 import { HomeContainer, Logo } from './styles'
 import { useState } from 'react'
 

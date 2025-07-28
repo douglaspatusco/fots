@@ -8,12 +8,26 @@ export const Container = styled.section`
   gap: 4em;
 
   height: 100%;
-  margin: 25vh 0 25vh 0;
+  margin: 2em 0;
   padding-top: 8em;
 
   @media (max-width: ${breakpoints.tablet}) {
     gap: 4em;
     height: 100%;
+    width: 100%;
+  }
+`
+
+export const AlbumSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  width: 100%;
+  text-align: center;
+
+  h4 {
+    text-transform: capitalize;
     width: 100%;
   }
 `

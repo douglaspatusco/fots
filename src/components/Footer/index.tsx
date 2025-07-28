@@ -8,9 +8,9 @@ const Footer = () => {
       <SocialLinks isHeader={false} />
       <ThemeButton />
       <Rights>
-        <p>&copy; 2024 Flying Over The Sea</p>
+        <p>&copy; 2025 Flying Over The Sea</p>
         <p>
-          <a href="https://github.com/eyelexx" target="_blank">
+          <a href="https://douglaspatusco.com" target="_blank">
             Developed by Douglas Eduardo
           </a>
         </p>

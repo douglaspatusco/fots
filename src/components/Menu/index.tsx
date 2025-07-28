@@ -33,15 +33,6 @@ const Menu = () => {
         <li>
           <a
             className={classActive ? 'fade-in' : ''}
-            href="#photos"
-            onClick={toggleClassActive}
-          >
-            PHOTOS
-          </a>
-        </li>
-        <li>
-          <a
-            className={classActive ? 'fade-in' : ''}
             href="#about"
             onClick={toggleClassActive}
           >
