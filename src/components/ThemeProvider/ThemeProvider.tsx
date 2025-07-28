@@ -1,18 +1,23 @@
-import { createContext, useState, useContext } from 'react'
+import { createContext, useState, useContext, useEffect } from 'react'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
-import { lightTheme, darkTheme } from '../../../theme'
+import { lightTheme, darkTheme } from '../../../themes'
+
+type ThemeMode = 'light' | 'dark'
 
 const ThemeContext = createContext({
-  theme: 'dark',
+  theme: 'light' as ThemeMode,
   toggleTheme: () => {}
 })
 
 const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children
 }) => {
-  const [theme, setTheme] = useState(
-    () => localStorage.getItem('theme') || 'light'
-  )
+  const [theme, setTheme] = useState<ThemeMode>('light')
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme') as ThemeMode | null
+    if (storedTheme) setTheme(storedTheme)
+  }, [])
 
   const toggleTheme = () => {
     setTheme((prevTheme) => {
@@ -22,9 +27,11 @@ const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
     })
   }
 
+  const selectedTheme = theme === 'dark' ? darkTheme : lightTheme
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <StyledThemeProvider theme={theme === 'dark' ? lightTheme : darkTheme}>
+      <StyledThemeProvider theme={selectedTheme}>
         {children}
       </StyledThemeProvider>
     </ThemeContext.Provider>
